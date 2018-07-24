@@ -85,11 +85,6 @@ function af_ajax_response(param,thisBtn,thisForm,response)
 	$('#successfullyModal').modal('show');
 } 
 
-
-
-
-
-
 /**
  *
  * Очистка формы после ajax
@@ -346,12 +341,12 @@ function files_handler( thisF, files, obj )
 
 /*
       if ( !file.type.match(/image\/(jpeg|jpg|png|gif)/) ) {
-          alert( 'Р¤РѕС‚РѕРіСЂР°С„РёСЏ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РІ С„РѕСЂРјР°С‚Рµ jpg, png РёР»Рё gif' );
+          alert( '' );
           continue;
       }
 
       if ( file.size > maxFileSize ) {
-          alert( 'Р Р°Р·РјРµСЂ С„РѕС‚РѕРіСЂР°С„РёРё РЅРµ РґРѕР»Р¶РµРЅ РїСЂРµРІС‹С€Р°С‚СЊ 2 РњР±' );
+          alert( '' );
           continue;
       }
 */
@@ -374,12 +369,7 @@ function previewImages(thisF,file) {
 		
     reader.addEventListener('load', function(event) {
 			
-			/*
-			if( !file.type.match(/image\/(jpeg|jpg|png|gif)/) )
-			{
-				img = event.target.result;
-			}
-			*/
+			/* if( !file.type.match(/image\/(jpeg|jpg|png|gif)/) ) img = event.target.result; */
 
 			imagesList.append(create_img(event.target.result,file.name));
     });
@@ -393,113 +383,21 @@ function create_img(src,title)
   return '<span class="image__list-item"><span class="image__list--box"><img src="'+src+'" title="'+title+'" alt="'+title+'" /><span class="image__list--text">'+title+'</span></span><span class="image__list--delete"></span></span>';
 }
 		
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-/*
-	$(itemsBlock).each(function( i )
-	{
-	  
-	  
 
-		if( type == 'input' || type == 'textarea' || type == 'input_hidden' || type == 'datepicker' )
-		{
-			//console.log(itemKey);
-			
-			if( typeof param != "undefined" ) return;
-			
-			//Р•СЃР»Рё РїРѕР»Рµ РѕРґРЅРѕ
-			if( item.length == 1 ) {
-				
-				if( item.val() ) {
-					formData.append(itemKey, item.val() );
-				} else {
-					if( status == 'required' )
-					{
-						validate = false;
-						$(this).find('.af_form--error').html( required_Error_Field );
-					}
-				}
-
-			} else {
-				
-				var args = [];
-				
-				$(item).each(function(i)
-				{
-					var val = $(this).val();
-					
-					if( val.length > 0 ) {
-						args[i] = val;
-					} else {
-						if( status == 'required' )
-						{
-							validate = false;
-							th.find('.af_form--error').html( required_Error_Field );
-						}
-					}
-					
-					
-				})
-				
-				for (var i = 0; i < args.length; i++) {
-				  formData.append(''+itemKey+'[]', args[i]);
-				}
-			}
-		}
-	})
-
-	if( validate ) {
-		return formData;
-	} else {
-		return false;
-	}
-}
-*/
-
-
-
-
-
-
-
-/*
+/**
  *
  * Возврящаем объект - Имя строковая переменная
  *
- */
+**/
  
  //function getObject(s) { return [s, eval(s)]; }
  function getObject(s) { return eval(s); }
  
- /*
+/**
  *
  * Удяляем картинки из загрузки файлов
  *
- */
+**/
  
  $('.uploadImagesList').on('click', '.image__list--delete', function (e) {
 	 
