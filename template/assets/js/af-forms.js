@@ -390,14 +390,14 @@ function create_img(src,title)
  *
 **/
  
- //function getObject(s) { return [s, eval(s)]; }
- function getObject(s) { return eval(s); }
+	//function getObject(s) { return [s, eval(s)]; }
+	function getObject(s) { return eval(s); }
  
 /**
  *
  * Удяляем картинки из загрузки файлов
  *
-**/
+**/ 
  
  $('.uploadImagesList').on('click', '.image__list--delete', function (e) {
 	 
