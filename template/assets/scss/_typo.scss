@@ -1,0 +1,29 @@
+body {
+  background: #f2f4f6; 
+}
+
+a {
+	transition: 0.2s linear;
+	text-decoration: none!important;
+  outline: none;
+}
+
+input:focus, textarea:focus, .nice-select:focus {
+	border-color: inherit!important;
+	box-shadow: inherit!important;
+}
+input:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparent;
+}
+input:focus::-moz-placeholder { /* Firefox 19+ */
+	color: transparent;
+}
+input:focus:-ms-input-placeholder { /* IE 10+ */
+  color: transparent;
+}
+input:focus:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 13px;
+}

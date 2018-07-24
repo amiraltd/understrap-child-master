@@ -1,0 +1,128 @@
+.nice-select {
+	width: 100%!important;
+	display: flex!important;
+  align-items: center!important;
+  .list {
+	  width: 100%!important; 
+  }
+}
+
+.af_form {
+	padding: 25px 0;
+	&_field {
+		margin-bottom: 20px;
+		position: relative;
+		&--block {
+			position: relative;
+		}
+	}
+	&--btn {
+    padding: 0 15px;
+	}
+}
+
+
+.files-block {
+	label {
+		width: 100%;
+	  display: flex;
+	  height: 90px;
+	  margin: 0;
+	  align-items: center;
+	  justify-content: space-between;
+	  background-color: rgba(124, 1, 140, 0.11);
+	  border: 1px dashed #666ea2;
+	  border-radius: 5px;
+	  padding: 0 25px;
+	  margin-bottom: 15px;
+	  font-size: 15px;
+	}
+	input {
+		width: 100%;
+		height: 100%;
+	  position: absolute;
+	  opacity: 0;
+	}
+}
+
+.require {
+	color: red;
+}
+
+.uploadImagesList {
+	.image__list {
+		&-item {
+			width: 147px;
+			height: 130px;
+		  display: inline-block;
+		  margin: 0 15px 15px 0;
+		  &:nth-child(4n+4) {
+			  margin-right: 0;
+		  }
+		  .image__list--box {
+			  display: inline-block;
+			  width: 100%;
+			  height: 100%;
+			  position: relative;
+			  background: #000;
+			  overflow: hidden;
+			  img {
+				  position: absolute;
+				  top: calc(50% - 10px);
+				  left: 50%;
+				  transform: translateX(-50%) translateY(-50%);
+			  }
+		  }
+		}
+	}
+	
+}
+
+.image__list {
+  &--text {
+	  display: inline-block;
+	  width: 100%;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  font-size: 13px;
+	  white-space: nowrap;
+	  position: absolute;
+	  bottom: 0;
+	  background: #fff;
+  }
+  &-item {
+	  position: relative;
+  }
+  &--delete {
+	  position: absolute;
+		right: -10px;
+		top: -5px;
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+		&:before, &:after {
+			position: absolute;
+			left: 5px;
+			content: ' ';
+			height: 13px;
+			width: 3px;
+			background-color: #c80000;
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+		&:after {
+			transform: rotate(-45deg);
+		}
+		&:hover {
+			opacity: 1;
+		}
+  }
+}
+
+.field-error {
+  color: red;
+  input, .nice-select {
+	  border-color: red;
+  }
+}
